@@ -7,7 +7,9 @@
 	<link rel="stylesheet" href="../css/media.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="../js/mask.js"></script>
 	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
 	<title>redree.gift</title>
 </head>
 <body>
@@ -51,7 +53,7 @@
 						<p>После заполения формы вы должны внести аванс в размере одной тысячи рублей для того чтоб мы приступили к работе, после оплаты на вашу электронную почту придёт логин и пароль для входа в личный кабинет где вы сможете отследить свой заказ и внести все нужные корректировки. Мы предоставляем вам несколько вариантов логотипа в зависимости от тарифа выбранного вами и соответствующее колличество правок. После утверждения вы указываете стоимость в которую вы его оценили итоговый вариант и указываете стоимость которую можете доплатить поверх одной тысячи рублей который были внесены в виде аванса.</p>
 					</div>
 					<div class="wrapStepButton">
-						<a href="" class="button"></a>
+						<span class="button"></span>
 						<label for="tes" class="checkbox flex">
 							<input type="checkbox" id="tes">
 							<p class="checked"></p>
@@ -138,14 +140,14 @@
 				<div class="middle-content__main-item flex">
 					<form action="" class="flex" id="form-contact">
 						<div class="middle-content__form-item flex">
-							<input type="text" placeholder="Имя Фамилия">
-							<input type="email" placeholder="Email">
-							<input type="text" placeholder="Номер телефона">
+							<input type="text" placeholder="Имя Фамилия" name="Sname">
+							<input type="email" placeholder="Email" name="Semail">
+							<input type="text" placeholder="Номер телефона" id="telephone" name="Sphone">
 							<input type="text" placeholder="Название компании">
 						</div>
 						<div class="middle-content__form-item flex">
 							<textarea name="" id="" placeholder="Ваши пожелания по логотипу"></textarea>
-							<button class="button">Отправить заявку</button>
+							<button type="submit" class="button">Отправить заявку</button>
 						</div>
 					</form>
 				</div>

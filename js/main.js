@@ -35,8 +35,7 @@ $( function () {
 		}
 
 		if (stepCaption.length) {
-			button.on("click", function (e) {
-				e.preventDefault();
+			button.not("button").on("click", function () {
 				$(".checkbox").trigger("click");
 					setTimeout(function () {
 						stepCaption[i].classList.remove("active");
@@ -45,7 +44,6 @@ $( function () {
 					     if(i >= stepCaption.length){
 					         i = 0;
 					     }
-
 
 					    stepCaption[i].classList.add("active");
 					    stepCaption[i].classList.add("line-through");
@@ -76,8 +74,37 @@ $( function () {
 
 			})
 		}
-			
-});
+		
+	$("#form-contact").validate({
+		submitHandler: function (form){
+
+		   $.post(form.action, $(form).serialize(), function (result, xhr){
+			if(result == "true"){
+			   $("#form-contact").find("input").val("");
+
+			}
+		   });
+		},
+		rules:{
+			Sname: {
+				required: true,
+				minlength: 2,
+			},
+			Semail: {
+				required: true,
+				email: true,
+				minlength: 10,
+			},
+			Sphone: {
+				required: true,
+				minlength: 13,
+			},
+		}
+	});
+  
+	$("#telephone").mask("+7 (999) 999-99-99");
+  });
+
 
 $(function () {
 	if (window.matchMedia("(max-width: 500px)").matches) {
