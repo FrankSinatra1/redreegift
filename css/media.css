@@ -1,0 +1,148 @@
+/* mobile */
+@media only screen and (max-width: 560px) {
+	h1.caption-h1 {
+		font-size: 36px;
+	}
+	body {
+		overflow: visible;
+	}
+	.logo-wrapper img {
+		height: 20px;
+	}
+	.logo-wrapper {
+		flex-direction: column;
+	}
+	.header-title {
+		justify-content: flex-start;
+	}
+	.chat-message__client-icon, .chat-message__bossadminsuperman-icon {
+		padding: 11px 16px;
+	}
+	.successPage .header {
+		margin-bottom: 40px;
+	}
+	.middle-conten__item-nextStep .step-caption {
+		font-size: 14px;
+	}
+	.footer {
+		height: 100%;
+		margin-top: 60px;
+	}
+	.footer-item * {
+		font-size: 14px;
+	}
+	.footer__social,.footer__contacts {
+		flex-direction: column;
+		width: auto;
+		justify-content: center;
+	}
+	.footer-item:first-child {
+		margin-bottom: 10px;
+	}
+	.container {
+		padding: 40px 30px;
+		overflow: hidden;
+		position: relative;
+		height: 100%;
+	}
+	.header {
+		margin-bottom: 100px;
+	}
+	.page-zayavka .header {
+		margin-bottom: 0;
+		align-items: flex-start;
+	}
+	.middle-content-wrapper {
+		flex-direction: column;
+	}
+	.chat-message__client-text {
+		margin-right: 0;
+	}
+	.chat-message__bossadminsuperman-text {
+		margin-left: 0;
+	}
+	.middle__main-page-text {
+		margin-bottom: 60px;
+	}
+	.middle-content__main-item {
+		font-size: 14px;
+		align-items: flex-start;
+	}
+	.middle-content__main-condition-sale {
+		padding: 40px 30px;
+		line-height: 19px;
+	}
+	.checkbox {
+		font-size: 14px;
+	}
+	.page-zayavka .middle-content__main {
+		min-height: 513px;
+	}
+	.middle-content__step {
+		margin-bottom: 60px;
+		width: 100%;
+	}
+	.middle-conten__item-nextStep .step-caption {
+		width: max-content;
+	}
+	.header-title h2 {
+		font-size: 18px;
+		text-align: left;
+		margin: 35px 0 15px 0;
+	}
+	.middle-content__main-carts__cart:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	#form-contact {
+		flex-direction: column;
+	}
+	#form-contact textarea {
+		height: 300px;
+		margin-top: 20px;
+	}
+	.middle-content__main {
+		align-items: flex-start;
+	}
+	.middle-content__form-item {
+		margin-right: 0;
+		max-width: 100%;
+	}
+	.middle-content__form-item .button {
+		margin-bottom: auto;
+	}
+	.middle-content__form-item input:not(:last-child), .middle-content__form-item textarea:not(:last-child) {
+		max-width: 100%;
+	}
+	.wrapper-middle-content__oplata--info {
+		flex-direction: column;
+	}
+	.middle-content__oplata--info {
+		margin-right: 0;
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+/* laptop */
+
+@media only screen  and (max-width: 1280px) {
+	.footer {
+		margin-top: 50px;
+	}
+	.middle-conten__item-nextStep:not(:last-child) {
+		margin-right: 50px;
+	}
+}
+
+@media only screen  and (max-width: 1440px) {
+
+}
+
+/* iPad */
+
+@media only screen  and (max-width: 1024px) {
+	.middle-content__main-carts {
+		flex-wrap: wrap;
+	}
+}
