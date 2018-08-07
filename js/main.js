@@ -54,6 +54,12 @@ $( function () {
 					        stepItemCur = 0;
 					    }
 
+					    if (i == 2) {
+					    	$(stepCaption[0]).parent().css({
+					    		marginLeft: "-235px"
+					    	});
+					    }
+
 					    stepItem[stepItemCur].classList.add("active");
 
 
@@ -61,14 +67,15 @@ $( function () {
 					    $(".page-zayavka .middle-content__main").css({
 					    	minHeight: heightStepItemActive
 					    });
-					}, 300)
+					}, 258)
 
 				if ($(this).parent().hasClass("middle-content__main-carts__cart")) {
 					var el = ($(this).parent());
 					setTimeout(function () {
 						$(".middle-content__oplata--selTarif h3").after(el);
 						el.addClass("idealcart");
-						el.find(".button").text("Перейти к оплате");
+						el.find(".button").remove();
+						el.append("<a class='button' href='../html/success.html'>Перейти к оплате</a>");
 					},1000)
 				}
 
@@ -81,24 +88,59 @@ $( function () {
 		   $.post(form.action, $(form).serialize(), function (result, xhr){
 			if(result == "true"){
 			   $("#form-contact").find("input").val("");
+			   console.log(1)
+			}
+			else {
+				setTimeout(function () {
+					stepCaption[i].classList.remove("active");
+				     i = i + 1;
+				     
+				     if(i >= stepCaption.length){
+				         i = 0;
+				     }
 
+				    stepCaption[i].classList.add("active");
+				    stepCaption[i].classList.add("line-through");
+					stepItem[stepItemCur].classList.remove("active");
+				    stepItemCur = stepItemCur + 1;
+				     
+				    if(stepItemCur >= stepItem.length){
+				        stepItemCur = 0;
+				    }
+
+				    stepItem[stepItemCur].classList.add("active");
+
+
+				    var heightStepItemActive = $(stepItem[stepItemCur]).height();
+				    $(".page-zayavka .middle-content__main").css({
+				    	minHeight: heightStepItemActive
+				    });
+				}, 228)
 			}
 		   });
 		},
 		rules:{
-			Sname: {
+			name: {
 				required: true,
 				minlength: 2,
 			},
-			Semail: {
+			email: {
 				required: true,
 				email: true,
 				minlength: 10,
 			},
-			Sphone: {
+			telephone: {
 				required: true,
 				minlength: 13,
 			},
+			nameCompany: {
+				required: true,
+				minlength: 2,
+			},
+			textareaTask: {
+				required: true,
+				minlength: 3,
+			}
 		}
 	});
   
